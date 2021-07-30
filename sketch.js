@@ -82,6 +82,7 @@ function keyReleased() {
   //if Space (32) key is pressed call shoot function of playerArrow
   if(keyCode === 32){
     //Call shoot() function and pass angle of playerArcher
+    Matter.Body.setAngle(arrow.body, playerArcher.body.angle);
     arrow.shoot(playerArcher.angle);
 
   }
